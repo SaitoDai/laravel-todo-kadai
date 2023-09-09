@@ -28,7 +28,7 @@ class TodoController extends Controller
         $todo->done = false;
         $todo->save();
 
-        $todo->tags()->sync($request->input('tag?ids'));
+        $todo->tags()->sync($request->input('tag_ids'));
 
         return redirect()->route('goals.index');
     }
